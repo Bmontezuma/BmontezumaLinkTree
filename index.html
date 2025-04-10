@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Brandon Montezuma | Elemental</title>
+  <title>Capstone | Brandon Montezuma & Collin Ballard</title>
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap');
 
@@ -11,118 +11,101 @@
       font-family: 'Orbitron', sans-serif;
       margin: 0;
       padding: 0;
-      background: linear-gradient(135deg, #000, #111);
+      background: #0a0a0a;
+      background-image: radial-gradient(circle, #1a1a1a 1px, transparent 1px);
+      background-size: 40px 40px;
+      animation: pulsebg 4s linear infinite;
       color: #fff;
-      overflow: hidden;
+      overflow-x: hidden;
+    }
+
+    @keyframes pulsebg {
+      0% { background-position: 0 0; }
+      100% { background-position: 40px 40px; }
     }
 
     h1 {
       text-align: center;
-      margin: 2rem auto 1rem;
-      font-size: 2.5rem;
-      letter-spacing: 3px;
-      z-index: 10;
+      margin: 3rem auto 1rem;
+      font-size: 2rem;
+      letter-spacing: 2px;
       position: relative;
+      z-index: 10;
     }
 
     .container {
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 1.5rem;
-      margin-top: 1rem;
+      gap: 1.2rem;
+      margin-bottom: 3rem;
       z-index: 10;
       position: relative;
     }
 
     .element-link {
       display: block;
-      width: 280px;
-      padding: 1.2rem;
+      width: 300px;
+      padding: 1rem;
       text-align: center;
       text-decoration: none;
-      border-radius: 12px;
-      font-size: 1.2rem;
-      font-weight: bold;
+      border-radius: 10px;
+      font-size: 1.1rem;
       transition: all 0.4s ease;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+      border: 2px solid #fff2;
+      font-weight: bold;
+      letter-spacing: 2px;
       position: relative;
+      z-index: 10;
     }
 
-    /* 🔥 Fire */
-    .fire {
-      background: #2b0000;
-      color: #ff6600;
-    }
-    .fire:hover {
-      background: #5a0000;
-      box-shadow: 0 0 25px 10px rgba(255, 80, 0, 0.9);
-      animation: flame 0.8s infinite alternate;
-    }
-
-    @keyframes flame {
-      0% { transform: scale(1) rotate(-1deg); }
-      100% { transform: scale(1.05) rotate(1deg); }
-    }
-
-    /* 🌊 Water */
-    .water {
-      background: #001f33;
-      color: #00ccff;
-    }
-    .water:hover {
-      background: #003f5c;
-      box-shadow: 0 0 30px 10px rgba(0, 200, 255, 0.9);
-      animation: ripple 0.6s ease-in-out infinite alternate;
-    }
-
-    @keyframes ripple {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.03); }
-    }
-
-    /* 🌪 Wind */
-    .wind {
-      background: #1a1a1a;
-      color: #d3d3ff;
-    }
-    .wind:hover {
-      background: #333;
-      box-shadow: 0 0 25px 10px rgba(200, 200, 255, 0.9);
-      animation: drift 0.5s ease-in-out infinite alternate;
-    }
-
-    @keyframes drift {
-      0% { transform: translateX(-2px); }
-      100% { transform: translateX(2px); }
-    }
-
-    /* 🌱 Earth */
-    .earth {
-      background: #002b00;
-      color: #00ff88;
-    }
-    .earth:hover {
-      background: #004d00;
-      box-shadow: 0 0 25px 10px rgba(0, 255, 150, 0.9);
-      animation: grow 0.6s ease-in-out infinite alternate;
-    }
-
-    @keyframes grow {
-      0% { transform: scale(1); }
-      100% { transform: scale(1.05); }
-    }
-
-    /* ✨ Ambient particle effect */
-    body::before {
+    .element-link::after {
       content: '';
       position: absolute;
       top: 0; left: 0;
       width: 100%; height: 100%;
-      background: url('https://www.transparenttextures.com/patterns/stardust.png');
-      opacity: 0.03;
-      z-index: 0;
+      background: inherit;
+      opacity: 0.1;
+      mix-blend-mode: screen;
       pointer-events: none;
+      z-index: -1;
+    }
+
+    /* Themed styles */
+    .containment {
+      background: #222200;
+      color: #ffcc00;
+    }
+    .containment:hover {
+      box-shadow: 0 0 20px 5px #ffcc00aa;
+      transform: scale(1.05) rotate(1deg);
+    }
+
+    .neural {
+      background: #1a002a;
+      color: #cc66ff;
+    }
+    .neural:hover {
+      box-shadow: 0 0 25px 7px #cc66ffaa;
+      transform: scale(1.05);
+    }
+
+    .mutation {
+      background: #002a00;
+      color: #66ff66;
+    }
+    .mutation:hover {
+      box-shadow: 0 0 20px 6px #66ff66aa;
+      transform: scale(1.05);
+    }
+
+    .overcharge {
+      background: #001a2a;
+      color: #66ccff;
+    }
+    .overcharge:hover {
+      box-shadow: 0 0 25px 7px #66ccffaa;
+      transform: scale(1.05) rotate(-1deg);
     }
 
     /* For mobile spacing */
@@ -134,12 +117,21 @@
   </style>
 </head>
 <body>
-  <h1>Brandon Montezuma</h1>
+
+  <h1>🧟‍♂️ Brandon Montezuma — Developer</h1>
   <div class="container">
-    <a class="element-link fire" href="https://github.com/Bmontezuma" target="_blank">🔥 GitHub</a>
-    <a class="element-link water" href="https://www.linkedin.com/in/brandon-montezuma/" target="_blank">🌊 LinkedIn</a>
-    <a class="element-link wind" href="https://www.artstation.com/brandonmontezuma6" target="_blank">🌪 Portfolio</a>
-    <a class="element-link earth" href="https://brandonmontezuma.wixsite.com/brandon-montezuma-3" target="_blank">🌱 Website</a>
+    <a class="element-link containment" href="https://github.com/Bmontezuma" target="_blank">☣️ Containment (GitHub)</a>
+    <a class="element-link neural" href="https://www.linkedin.com/in/brandon-montezuma/" target="_blank">🧠 Neural Link (LinkedIn)</a>
+    <a class="element-link overcharge" href="https://www.artstation.com/brandonmontezuma6" target="_blank">🔋 Overcharge (Portfolio)</a>
+    <a class="element-link mutation" href="https://brandonmontezuma.wixsite.com/brandon-montezuma-3" target="_blank">🧬 Mutation (Website)</a>
   </div>
+
+  <h1>🔧 Collin Ballard — Team Lead</h1>
+  <div class="container">
+    <a class="element-link containment" href="https://github.com/Collinb190" target="_blank">☣️ Containment (GitHub)</a>
+    <a class="element-link neural" href="https://www.linkedin.com/in/collin-ballard" target="_blank">🧠 Neural Link (LinkedIn)</a>
+    <a class="element-link overcharge" href="https://www.linkwithlin.com/" target="_blank">🔋 Overcharge (Portfolio)</a>
+  </div>
+
 </body>
 </html>
