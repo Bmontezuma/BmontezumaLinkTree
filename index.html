@@ -3,39 +3,96 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Your Linktree</title>
+  <title>Brandon Montezuma</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
-      background: #111;
+      font-family: 'Orbitron', sans-serif;
+      background: radial-gradient(ellipse at center, #0a0a0a 0%, #000 100%);
       color: #fff;
       text-align: center;
       padding: 2rem;
+      overflow: hidden;
     }
+
     h1 {
-      margin-bottom: 1.5rem;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
     }
-    a {
+
+    .element-link {
       display: block;
-      background: #333;
-      color: #fff;
       padding: 1rem;
-      margin: 1rem auto;
+      margin: 1.2rem auto;
       max-width: 300px;
       text-decoration: none;
-      border-radius: 8px;
-      transition: background 0.2s;
+      border-radius: 10px;
+      font-size: 1.2rem;
+      color: #fff;
+      transition: all 0.4s ease-in-out;
+      position: relative;
+      z-index: 1;
     }
-    a:hover {
-      background: #555;
+
+    /* FIRE */
+    .fire {
+      background: #330000;
+      box-shadow: 0 0 10px rgba(255, 80, 0, 0.6);
+    }
+    .fire:hover {
+      background: #550000;
+      box-shadow: 0 0 25px 8px rgba(255, 100, 0, 0.9);
+    }
+
+    /* WATER */
+    .water {
+      background: #001f33;
+      box-shadow: 0 0 10px rgba(0, 180, 255, 0.6);
+    }
+    .water:hover {
+      background: #003355;
+      box-shadow: 0 0 25px 8px rgba(0, 200, 255, 0.9);
+    }
+
+    /* WIND */
+    .wind {
+      background: #1a1a1a;
+      box-shadow: 0 0 10px rgba(200, 200, 255, 0.5);
+    }
+    .wind:hover {
+      background: #2a2a2a;
+      box-shadow: 0 0 25px 8px rgba(230, 230, 255, 0.9);
+    }
+
+    /* EARTH */
+    .earth {
+      background: #002b00;
+      box-shadow: 0 0 10px rgba(0, 255, 100, 0.6);
+    }
+    .earth:hover {
+      background: #004400;
+      box-shadow: 0 0 25px 8px rgba(0, 255, 150, 0.9);
+    }
+
+    /* Elemental particles (optional subtle sparkle) */
+    body::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/dark-mosaic.png');
+      opacity: 0.05;
+      z-index: 0;
     }
   </style>
 </head>
 <body>
   <h1>Brandon Montezuma</h1>
-  <a href="https://github.com/Bmontezuma" target="_blank">GitHub</a>
-  <a href="https://www.linkedin.com/in/brandon-montezuma/" target="_blank">LinkedIn</a>
-  <a href="https://www.artstation.com/brandonmontezuma6" target="_blank">Portfolio</a>
-  <a href="https://brandonmontezuma.wixsite.com/brandon-montezuma-3" target="_blank">Website</a>
+  <a class="element-link fire" href="https://github.com/Bmontezuma" target="_blank">🔥 GitHub</a>
+  <a class="element-link water" href="https://www.linkedin.com/in/brandon-montezuma/" target="_blank">🌊 LinkedIn</a>
+  <a class="element-link wind" href="https://www.artstation.com/brandonmontezuma6" target="_blank">🌪 Portfolio</a>
+  <a class="element-link earth" href="https://brandonmontezuma.wixsite.com/brandon-montezuma-3" target="_blank">🌱 Website</a>
 </body>
 </html>
